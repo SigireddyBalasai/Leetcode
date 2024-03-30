@@ -18,12 +18,10 @@ class Solution:
                 curr.next = curr2
                 curr2 = curr2.next
                 curr = curr.next
-        while(curr1 != None):
+        if curr1 != None:
                 curr.next = curr1
-                curr1 = curr1.next
                 curr = curr.next
-        while(curr2 != None):
+        if curr2 != None:
                 curr.next = curr2
-                curr2 = curr2.next
                 curr = curr.next
         return head.next
