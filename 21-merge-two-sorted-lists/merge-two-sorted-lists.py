@@ -9,7 +9,7 @@ class Solution:
         curr2=list2
         head = ListNode()
         curr = head
-        while(curr1 != None and curr2 != None):
+        while(curr1  and curr2):
             if curr1.val <= curr2.val:
                 curr.next = curr1
                 curr1 = curr1.next
