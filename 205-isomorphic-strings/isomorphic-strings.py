@@ -14,5 +14,4 @@ class Solution:
                     
             dict[i]=j
             dict2[j]=i
-            print(i,j)
         return True
