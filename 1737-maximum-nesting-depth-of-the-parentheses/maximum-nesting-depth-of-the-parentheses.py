@@ -5,8 +5,7 @@ class Solution:
         for i in s:
             if i == "(":
                 count += 1
-                if count > max_count:
-                    max_count = count
+                max_count = max(count,max_count) 
             elif(i == ")"):
                 count -=1
         return max_count
