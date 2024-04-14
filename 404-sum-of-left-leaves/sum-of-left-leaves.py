@@ -6,7 +6,6 @@
 #         self.right = right
 class Solution:
     def sumOfLeftLeaves(self, root: Optional[TreeNode]) -> int:
-        print(f(root))
         return f(root)
 
 def f(root, isLeft=False):
