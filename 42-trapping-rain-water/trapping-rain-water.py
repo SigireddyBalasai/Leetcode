@@ -15,8 +15,10 @@ class Solution:
             # for j in range(i+1,len(height)):
             #     if height[j] > height[i] and height[j] > max_r:
             #         max_r = height[j]
-            if height[i] <= min(max_l,max_r):
-                area += min(max_l,max_r) - height[i]
+            ar =  min(max_l,max_r) - height[i]
+            if ar >= 0:
+                print(ar)
+                area += ar
             print(max_l,height[i],max_r,area)
             if height[i] > max_curr:
                 max_curr = height[i]
