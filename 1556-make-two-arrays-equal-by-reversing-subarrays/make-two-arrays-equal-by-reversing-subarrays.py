@@ -2,8 +2,8 @@ class Solution:
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
         if len(target)!=len(arr):
             return False
-        if sum(target)!=sum(arr):
-            return False    
+        # if sum(target)!=sum(arr):
+        #     return False    
         dict_ = {}    
         for i in range(len(arr)):
             if arr[i] in dict_:
