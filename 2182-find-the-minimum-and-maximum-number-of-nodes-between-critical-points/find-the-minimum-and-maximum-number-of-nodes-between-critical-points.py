@@ -5,16 +5,16 @@
 #         self.next = next
 class Solution:
     def nodesBetweenCriticalPoints(self, head: Optional[ListNode]) -> List[int]:
-        next=head.next.next
         prev=head
-        curr=head.next
+        curr=prev.next
+        next=curr.next
         count=1
         list_=[]
         prev_loc=None
         min_=99999
         while next != None:
-            if prev == None or next == None:
-                continue
+            if next == None:
+                break
             if ((curr.val > prev.val) and (curr.val > next.val)) or ((curr.val < prev.val) and (curr.val < next.val)):
                 list_.append(count)
                 if prev_loc is not None:
