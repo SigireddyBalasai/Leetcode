@@ -15,16 +15,10 @@ class Solution:
         while next != None:
             if prev == None or next == None:
                 continue
-            if (curr.val > prev.val) and (curr.val > next.val):
+            if ((curr.val > prev.val) and (curr.val > next.val)) or ((curr.val < prev.val) and (curr.val < next.val)):
                 list_.append(count)
                 if prev_loc is not None:
                     min_=min(min_,(count-prev_loc))
-                prev_loc=count
-            if (curr.val < prev.val) and (curr.val < next.val):
-                if prev_loc is not None:
-                    min_=min(min_,(count-prev_loc))
-                print(min_,count,prev_loc)
-                list_.append(count)
                 prev_loc=count
             count+=1
             prev=curr
