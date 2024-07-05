@@ -32,5 +32,5 @@ class Solution:
             next=next.next
         if len(list_) < 2:
              return [-1,-1]
-        max_=abs(list_[-1]-list_[0])
+        max_=list_[-1]-list_[0]
         return [min_,max_]
