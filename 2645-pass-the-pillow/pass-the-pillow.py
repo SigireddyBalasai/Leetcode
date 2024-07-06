@@ -6,8 +6,7 @@ class Solution:
         b = time // (n-1)
         if b % 2 == 0:
             return 1+a
-        else:
-            return n - a
+        return n - a
         # for i in range(time+1):
         #     if t == n or (t == 1 and upgrade == -1):
         #         upgrade = -upgrade
