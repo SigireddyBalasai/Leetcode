@@ -1,6 +1,6 @@
 class Solution:
     def removeDuplicates(self, s: str) -> str:
-        arr= []
+        arr : List[int]= []
         for i in s:
             if arr and i == arr[-1]:
                 arr.pop()
