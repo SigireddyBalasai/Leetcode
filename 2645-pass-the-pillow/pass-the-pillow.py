@@ -1,7 +1,7 @@
 class Solution:
     def passThePillow(self, n: int, time: int) -> int:
-        t = 0
-        upgrade = +1
+        # t = 0
+        # upgrade = +1
         a = time % (n-1)
         b = time // (n-1)
         if b % 2 == 0:
