@@ -9,6 +9,6 @@ class Solution:
             num_empty+=num_full
             num_change = num_empty//numExchange
             num_full=num_change
-            num_empty-=num_change*numExchange
+            num_empty=num_empty%numExchange
         return sum
         
