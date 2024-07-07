@@ -7,7 +7,7 @@ class Solution:
         while(num_full>0):
             sum+=num_full
             num_empty+=num_full
-            num_change = math.floor(num_empty/numExchange)
+            num_change = num_empty//numExchange
             num_full=num_change
             num_empty-=num_change*numExchange
         return sum
