@@ -7,8 +7,7 @@ class Solution:
         while(num_full>0):
             sum+=num_full
             num_empty+=num_full
-            num_change = num_empty//numExchange
-            num_full=num_change
+            num_full = num_empty//numExchange
             num_empty=num_empty%numExchange
         return sum
         
