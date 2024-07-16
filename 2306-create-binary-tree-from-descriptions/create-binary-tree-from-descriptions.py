@@ -12,7 +12,6 @@ class Solution(object):
         :rtype: Optional[TreeNode]
         """
         root_dict = {}
-        descriptions.sort(key=lambda x:x[0])
         child_list=set()
         nodes=set()
         for i in descriptions:
