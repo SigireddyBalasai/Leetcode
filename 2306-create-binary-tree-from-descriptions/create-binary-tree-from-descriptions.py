@@ -25,7 +25,7 @@ class Solution(object):
             root_ = root_dict.get(root)
             if  child not in root_dict:
                 root_dict[child] = TreeNode(child)
-            child_=root_dict[child]
+            child_=root_dict.get(child)
             if boolean:
                 root_.left = child_
             else:
