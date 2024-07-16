@@ -12,7 +12,7 @@ class Solution(object):
         :rtype: Optional[TreeNode]
         """
         root_dict = {}
-        descriptions.sort(key=lambda x:x[1])
+        descriptions.sort(key=lambda x:x[0])
         child_list=set()
         nodes=set()
         highest_root = -1
