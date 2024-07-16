@@ -17,15 +17,15 @@ class Solution(object):
         highest_root = -1
         for i in descriptions:
             root,child,boolean = i
-            if root not in root_dict:
-                nodes.add(root)
-                root_dict[root] = TreeNode(root)
-            root_ = root_dict[root]
-            if  child not in root_dict:
-                nodes.add(child)
-                root_dict[child] = TreeNode(child)
+            nodes.add(root)
+            nodes.add(child)
             child_list.add(child)
-            child_ = root_dict[child]
+            if root not in root_dict:
+                root_dict[root] = TreeNode(root)
+            root_ = root_dict.get(root)
+            if  child not in root_dict:
+                root_dict[child] = TreeNode(child)
+            child_=root_dict[child]
             if boolean:
                 root_.left = child_
             else:
