@@ -12,7 +12,7 @@ class Solution(object):
         :rtype: Optional[TreeNode]
         """
         root_dict = {}
-        descriptions.sort(key=lambda x:x[1])
+        descriptions.sort(key=lambda x:x[0])
         child_list=set()
         nodes=set()
         highest_root = -1
@@ -24,7 +24,6 @@ class Solution(object):
             root_ = root_dict.get(root)
             if  child not in root_dict:
                 nodes.add(child)
-                
                 root_dict[child] = TreeNode(child)
             child_=root_dict.get(child)
             child_list.add(child)
