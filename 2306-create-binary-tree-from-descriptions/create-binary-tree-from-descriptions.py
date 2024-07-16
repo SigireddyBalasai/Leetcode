@@ -15,16 +15,15 @@ class Solution(object):
         descriptions.sort(key=lambda x:x[0])
         child_list=set()
         nodes=set()
-        highest_root = -1
         for i in descriptions:
             root,child,boolean = i
             if root not in root_dict:
                 nodes.add(root)
                 root_dict[root] = TreeNode(root)
-            root_ = root_dict.get(root)
             if  child not in root_dict:
                 nodes.add(child)
                 root_dict[child] = TreeNode(child)
+            root_ = root_dict.get(root)    
             child_=root_dict.get(child)
             child_list.add(child)
             if boolean:
